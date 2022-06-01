@@ -34,7 +34,7 @@ grub-mkimage \
     -c /tmp/grub-core.cfg \
     --prefix "$part/boot/grub" \
     --output "$GRUB_DIR"/X86_64-efi/core.efi \
-    --format arm64-efi \
+    --format X86_64-efi \
     --compression auto \
     $MODULES
 
