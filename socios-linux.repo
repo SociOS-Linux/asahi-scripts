@@ -1,0 +1,18 @@
+[socios-linux]
+name=socios Fedora $releasever - $basearch
+baseurl=https://github.com/socios-linux/socios-scripts/socios-linux.repo
+skip_if_unavailable=1
+repo_gpgcheck=0
+metadata_expire=2d
+gpgcheck=1
+gpgkey=https://github.com/socios-linux/RPM-GPG-KEY-socios
+
+[socios-linux-source]
+name=socios Fedora $releasever - $basearch - Source
+baseurl=https://github.com/socios-linux/$releasever/source/SRPMS/
+enabled=0
+skip_if_unavailable=1
+repo_gpgcheck=0
+metadata_expire=2d
+gpgcheck=1
+gpgkey=https://github.com/socios-linux/RPM-GPG-KEY-socios
