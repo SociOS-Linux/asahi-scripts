@@ -7,7 +7,7 @@ BOOT_PART="/boot"
 EFI_PART="/boot/efi"
 GRUB_DIR="$BOOT_PART/grub"
 CONFIG="/boot/grub/grub.cfg"
-TARGET="$EFI_PART/EFI/BOOT/BOOTAA64.EFI"
+TARGET="$EFI_PART/EFI/BOOT/BOOTX86_64.EFI"
 MODULES="ext2 part_gpt search"
 
 [ -e /etc/default/update-grub ] && source /etc/default/update-grub
@@ -33,11 +33,11 @@ grub-mkimage \
     --directory '/usr/lib/grub/arm64-efi' \
     -c /tmp/grub-core.cfg \
     --prefix "$part/boot/grub" \
-    --output "$GRUB_DIR"/arm64-efi/core.efi \
+    --output "$GRUB_DIR"/X86_64-efi/core.efi \
     --format arm64-efi \
     --compression auto \
     $MODULES
 
-cp "$GRUB_DIR"/arm64-efi/core.efi "$TARGET"
+cp "$GRUB_DIR"/X86_64-efi/core.efi "$TARGET"
 
 grub-mkconfig -o "$CONFIG"
