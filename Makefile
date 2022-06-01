@@ -16,7 +16,7 @@ install:
 	ln -sf $(addprefix $(PREFIX)/lib/systemd/system/,$(SYSINIT_WANTS)) \
 		$(DESTDIR)$(PREFIX)/lib/systemd/system/sysinit.target.wants/
 	install -dD $(DESTDIR)$(PREFIX)/lib/initcpio/install
-	install -m0644 -t $(DESTDIR)$(PREFIX)/lib/initcpio/install initcpio/install/asahi
+	install -m0644 -t $(DESTDIR)$(PREFIX)/lib/initcpio/install initcpio/install/socios
 	install -dD $(DESTDIR)$(PREFIX)/share/libalpm/hooks
 	install -m0644 -t $(DESTDIR)$(PREFIX)/share/libalpm/hooks libalpm/hooks/95-m1n1-install.hook
 
@@ -25,7 +25,7 @@ uninstall:
 	rm -f $(addprefix $(DESTDIR)$(PREFIX)/lib/systemd/system/,$(UNITS))
 	rm -f $(addprefix $(DESTDIR)$(PREFIX)/lib/systemd/system/multi-user.target.wants/,$(MULTI_USER_WANTS))
 	rm -f $(addprefix $(DESTDIR)$(PREFIX)/lib/systemd/system/sysinit.target.wants/,$(SYSINIT_WANTS))
-	rm -f $(DESTDIR)$(PREFIX)/lib/initcpio/install/asahi
+	rm -f $(DESTDIR)$(PREFIX)/lib/initcpio/install/socios
 	rm -f $(DESTDIR)$(PREFIX)/share/libalpm/hooks/95-m1n1-install.hook
 
 .PHONY: install uninstall
