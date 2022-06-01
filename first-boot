@@ -43,5 +43,5 @@ update-grub
 echo
 echo "Initializing Pacman keyring..."
 pacman-key --init
-pacman-key --populate archlinuxarm asahilinux
+pacman-key --populate archlinux archlinuxarm asahilinux socioslinux
 echo
