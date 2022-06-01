@@ -3,7 +3,7 @@ Type = Path
 Operation = Install
 Operation = Upgrade
 Target = usr/lib/modules/*/dtbs/*
-Target = usr/lib/asahi-boot/*
+Target = usr/lib/socios-boot/*
 
 [Action]
 Description = Updating m1n1 image...
